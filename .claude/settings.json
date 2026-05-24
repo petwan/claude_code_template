@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p .claude)",
+      "Bash(mkdir -p src tests docs)",
+      "Bash(touch src/.gitkeep tests/.gitkeep)"
+    ],
+    "additionalDirectories": [
+      ".",
+      "src",
+      "tests"
+    ]
+  },
+  "project": {
+    "name": "claude-code-template",
+    "version": "0.1.0",
+    "description": "Claude Code 项目脚手架"
+  },
+  "coding": {
+    "indent": "4 spaces",
+    "maxLineLength": 120,
+    "lineEnding": "LF"
+  }
+}
