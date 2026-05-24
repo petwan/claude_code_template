@@ -1,7 +1,7 @@
 [project]
-name = "project-name"
+name = "claude-code-template"
 version = "0.1.0"
-description = "项目描述"
+description = "Claude Code 项目脚手架"
 authors = [{name = "Your Name", email = "you@example.com"}]
 requires-python = ">=3.10"
 dependencies = []
@@ -13,11 +13,21 @@ dev = [
     "black>=23.0",
     "isort>=5.12",
     "mypy>=1.0",
+    "commitizen>=3.0",
 ]
 
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = [
+    "src/__init__.py",
+    "pyproject.toml"
+]
+changelog_message_template = "{message}"
+update_changelog_on_bump = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
